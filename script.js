@@ -1,16 +1,31 @@
-let rock = "Rock";
-let paper = "Paper";
-let scissor = "Scissor";
+let rock = "rock";
+let paper = "paper";
+let scissor = "scissor";
 
 function getComputerChoice() {
-    let choice = Math.random();
-    if (choice < 1/3) {
+    let aiChoice = Math.random();
+    if (aiChoice < 1/3) {
         return rock;
-    } else if (choice < 2/3) {
+    } else if (aiChoice < 2/3) {
         return paper;
     } else {
         return scissor;
     }
 }
 
+function getHumanChoice() {
+    let playerChoice = prompt();
+    playerChoice = playerChoice.toLowerCase();
+    if (playerChoice == rock) {
+        return rock;
+    }
+    if (playerChoice == paper) {
+        return paper;
+    }
+    if (playerChoice == scissor) {
+        return scissor;
+    }
+}
+
 console.log(getComputerChoice());
+console.log(getHumanChoice());

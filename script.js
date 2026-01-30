@@ -14,7 +14,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let playerChoice = prompt();
+    let playerChoice = prompt("Choose Rock, Paper or Scissor");
     playerChoice = playerChoice.toLowerCase();
     if (playerChoice === rock) {
         return rock;
